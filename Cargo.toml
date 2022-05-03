@@ -1,0 +1,14 @@
+[package]
+name = "test"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = [ "cdylib" ]
+
+[dependencies]
+anyhow = "1"
+bytes = "1"
+http = "0.2"
+spin-sdk = { path = "../spin/sdk/rust", version = "0.1.0" }
+wit-bindgen-rust = { git = "https://github.com/bytecodealliance/wit-bindgen", rev = "2f46ce4cc072107153da0cefe15bdc69aa5b84d0" }

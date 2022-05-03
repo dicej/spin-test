@@ -1,0 +1,14 @@
+spin_version = "1"
+authors = ["Fermyon Engineering <engineering@fermyon.com>"]
+name = "spin-test"
+trigger = {type = "http", base = "/"}
+version = "1.0.0"
+
+[[component]]
+id = "test"
+source = "target/wasm32-wasi/release/test.wasm"
+files = [{source = "static", destination = "/static"}]
+[component.trigger]
+route = "/test"
+[component.build]
+command = "make"
