@@ -14,6 +14,6 @@ and, in another terminal:
 spin build
 spin bindle push --file spin.toml
 # this will block waiting for connections; just Ctrl-C it after a second or two:
-heaptrack spin up --bindle spin-test/1.0.0
+rm -f heaptrack.spin.* && heaptrack spin up --bindle spin-test/1.0.0
 heaptrack_gui heaptrack.spin.*
 ```
